@@ -1,2 +1,2 @@
 ExUnit.start()
-Ecto.Adapters.SQL.Sandbox.mode(PokeApi.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(PokeBattle.Repo, :manual)

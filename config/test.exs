@@ -5,23 +5,23 @@ import Config
 # The MIX_TEST_PARTITION environment variable can be used
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
-config :poke_api, PokeApi.Repo,
+config :poke_battle, PokeBattle.Repo,
   username: "postgres",
   password: "postgres",
   hostname: "localhost",
-  database: "poke_api_test#{System.get_env("MIX_TEST_PARTITION")}",
+  database: "poke_battle_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: 10
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :poke_api, PokeApiWeb.Endpoint,
+config :poke_battle, PokeBattleWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
-  secret_key_base: "xOMTpCYMgyHyE7bS3vvoPupM4etGCVzL8siuaBN1hORO9Yztf+M01rIFZZUQrQxT",
+  secret_key_base: "ZbJBRCuVHL1yxCJMTmS7HIfVRPHkALVyFjTScngWFqh96h6LxItlARE3ogvBAnUZ",
   server: false
 
 # In test we don't send emails.
-config :poke_api, PokeApi.Mailer, adapter: Swoosh.Adapters.Test
+config :poke_battle, PokeBattle.Mailer, adapter: Swoosh.Adapters.Test
 
 # Disable swoosh api client as it is only required for production adapters.
 config :swoosh, :api_client, false

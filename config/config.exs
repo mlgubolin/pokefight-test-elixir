@@ -7,20 +7,20 @@
 # General application configuration
 import Config
 
-config :poke_api,
-  ecto_repos: [PokeApi.Repo],
+config :poke_battle,
+  ecto_repos: [PokeBattle.Repo],
   generators: [timestamp_type: :utc_datetime]
 
 # Configures the endpoint
-config :poke_api, PokeApiWeb.Endpoint,
+config :poke_battle, PokeBattleWeb.Endpoint,
   url: [host: "localhost"],
   adapter: Phoenix.Endpoint.Cowboy2Adapter,
   render_errors: [
-    formats: [html: PokeApiWeb.ErrorHTML, json: PokeApiWeb.ErrorJSON],
+    formats: [html: PokeBattleWeb.ErrorHTML, json: PokeBattleWeb.ErrorJSON],
     layout: false
   ],
-  pubsub_server: PokeApi.PubSub,
-  live_view: [signing_salt: "vnkzCR4X"]
+  pubsub_server: PokeBattle.PubSub,
+  live_view: [signing_salt: "H80LA1In"]
 
 # Configures the mailer
 #
@@ -29,7 +29,7 @@ config :poke_api, PokeApiWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :poke_api, PokeApi.Mailer, adapter: Swoosh.Adapters.Local
+config :poke_battle, PokeBattle.Mailer, adapter: Swoosh.Adapters.Local
 
 # Configure esbuild (the version is required)
 config :esbuild,

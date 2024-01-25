@@ -8,8 +8,8 @@ const path = require("path")
 module.exports = {
   content: [
     "./js/**/*.js",
-    "../lib/poke_api_web.ex",
-    "../lib/poke_api_web/**/*.*ex"
+    "../lib/poke_battle_web.ex",
+    "../lib/poke_battle_web/**/*.*ex"
   ],
   theme: {
     extend: {
