@@ -14,7 +14,7 @@ defmodule PokeBattle.Repo.Migrations.CreatePokemons do
 
     alter table :participants do
       remove :pokemon, :string
-      add :pokemon_id, references(:pokemons, on_delete: :restricted)
+      add :pokemon_id, references(:pokemons, on_delete: :nothing)
     end
 
     create index(:participants, [:pokemon_id])

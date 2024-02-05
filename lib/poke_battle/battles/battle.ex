@@ -1,10 +1,10 @@
-defmodule PokeBattle.Battle do
+defmodule PokeBattle.Battle.Battle do
   use Ecto.Schema
   import Ecto.Changeset
 
   schema "battles" do
 
-    has_many :participants, PokeBattle.Participant
+    has_many :participants, PokeBattle.Battle.Participant
     timestamps(type: :utc_datetime)
   end
 

@@ -9,3 +9,17 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+pkmns = [
+  %{name: "bulbasaur", number: 1},
+  %{name: "ivysaur", number: 2},
+  %{name: "venusaur", number: 3},
+  %{name: "charmander", number: 4},
+  %{name: "charmeleon", number: 5},
+  %{name: "charizard", number: 6},
+  %{name: "squirtle", number: 7},
+  %{name: "wartortle", number: 8},
+  %{name: "blastoise", number: 9},
+]
+
+PokeBattle.Repo.insert_all(PokeBattle.Pokemon, pokmns)
